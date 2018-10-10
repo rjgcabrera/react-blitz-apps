@@ -1,0 +1,38 @@
+body {
+  background-color: lightgrey;
+}
+
+#main-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  /* min-height: 40vh; */
+  margin-top: 20vh;
+}
+
+.col {
+  text-align: center;
+  margin-left: 25px;
+  width: 25vw;
+  /* background-color: white; */
+}
+
+.tasks {
+  background-color: white;
+  min-height: 30vh;
+  padding: 10px;
+}
+
+#Mary, #Jane, #Peter, #Parker {
+  padding: 2rem 0;
+  margin-bottom: 25px;
+}
+
+#Mary, #Jane {
+  background-color: pink;
+}
+
+#Peter, #Parker {
+  background-color: lightblue;
+}
