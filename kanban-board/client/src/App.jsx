@@ -27,8 +27,8 @@ class App extends React.Component {
 
   addTask(colIdx) {
     let prompt = new Promise((resolve, reject) => {
-      let tasks = this.state.tasks;
-      let newTask = window.prompt("Enter a new task", "New Task");
+      let tasks = [...this.state.tasks];
+      let newTask = _.escape(window.prompt("Enter a new task", "New Task"));
       tasks[colIdx].push(newTask);
       resolve(tasks)
     });
@@ -43,7 +43,7 @@ class App extends React.Component {
   }
 
   moveTask(colIdx, taskIdx, direction) {
-    let tasks = this.state.tasks;
+    let tasks = [...this.state.tasks];
     let task = tasks[colIdx].splice(taskIdx, 1)[0];
     if (direction === "L") {
       tasks[colIdx - 1].push(task);
